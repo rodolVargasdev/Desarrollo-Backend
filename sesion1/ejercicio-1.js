@@ -7,10 +7,8 @@ const rl = readline.createInterface({
 
 rl.question('Ingrese su nombre: ', (nombre => {
     rl.question('Ingrese su apellido: ', (apellido) =>{
-        console.log(`Hola ${nombre} ${apellido} bienvenido!`)
-        rl.close();
+        console.log(`Hola ${nombre} ${apellido} bienvenido!`) 
     })
-    
 }))
 
 
