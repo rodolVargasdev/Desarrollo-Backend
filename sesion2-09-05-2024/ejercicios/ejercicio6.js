@@ -1,5 +1,6 @@
-const encontrarPersona = (coleccionPersonas, name) => {
-    
+// 
+
+const encontrarPersona = (coleccionPersonas, name) => {   
     let personaEncontrada = coleccionPersonas.find(({ nombre }) => (nombre == name))
     
     if(personaEncontrada !== undefined ){
