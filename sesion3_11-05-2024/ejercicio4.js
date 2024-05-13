@@ -1,14 +1,19 @@
-const readline = require('readline')
+export const ejercicio4 = () =>{
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
+    const readline = require('readline')
 
-rl.question("Digite el numero a realizar el factorial ", (num) =>{
-    if (num%2 === 0) {
-        console.log("El número es par")
-    }else{
-        console.log("El número es par")
-    }
-})
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    })
+    
+    rl.question("Digite el numero a realizar el factorial ", (num) =>{
+        if (num%2 === 0) {
+            console.log("El número es par")
+        }else{
+            console.log("El número es par")
+        }
+    })
+
+}
+
