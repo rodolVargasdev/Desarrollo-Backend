@@ -1,4 +1,4 @@
-export const ejercicio4 = () =>{
+module.exports.ejercicio4 = () =>{
 
     const readline = require('readline')
 

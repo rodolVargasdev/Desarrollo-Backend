@@ -1,7 +1,7 @@
-export const ejercicio7 = () => {
+module.exports.ejercicio7 = () =>{
 
     const readline = require('readline');
-
+    
     const rl = readline.createInterface({
       input: process.stdin,
       output: process.stdout
@@ -33,8 +33,10 @@ export const ejercicio7 = () => {
         
         console.log(tipoVehiculo)
     })
-
+    
 }
+
+
 
 
 

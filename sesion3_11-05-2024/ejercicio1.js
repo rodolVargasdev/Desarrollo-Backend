@@ -1,27 +1,24 @@
-export const ejercicio1 = () => {
+module.exports.ejercicio1 = () => {
 
     const readline = require('readline')
 
     const rl = readline.createInterface({
         input: process.stdin,
-        output: process.stdout
+        output: process.stdout,
+        echo: false
     })
-
-    const evaluar = (numero) => {
-        if( numero >= 1){
-            return console.log(numero + ' El número es positivo') 
-        }else if( numero <= -1 ){
-            return console.log(numero + ' El número es negativo')
-        }else{
-            return console.log('El número es 0')
-        }
+        
+            rl.question('Ingrese un número: ', (numero) =>{ 
+                if( numero >= 1){
+                    console.log(numero + ' El número es positivo') 
+                    
+                }else if( numero <= -1 ){
+                    console.log(numero + ' El número es negativo')
+                }else{
+                    console.log('El número es 0')
+                }
+                rl.close()
+            })
+             
     }
-
-    rl.question('Ingrese un número: ', (numero) =>{ 
-
-        evaluar(numero);
-
-    })
-
-}
 
