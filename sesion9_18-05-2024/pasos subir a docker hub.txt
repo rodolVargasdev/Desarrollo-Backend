@@ -1,0 +1,82 @@
+subir app a docker hub*
+
+#entrar al directorio de la app
+
+1. 
+#Crear archivo dockerfile
+
+echo > Dockerfile
+
+2. 
+#crear .dockerignore
+#echo > .dockerignore
+#mod .dockerignore
+
+node_modules
+npm-debug.log
+
+
+#mod Dockerfile
+	FROM node:14
+	WORKDIR /app
+
+	COPY package*.json/ ./
+
+	COPY ..
+
+	RUN npm install
+
+	CMD ["node", "index.js"]
+
+												FROM node:14
+
+												WORKDIR /app
+
+												COPY package*.json/ ./
+
+												COPY . .
+
+												RUN npm install
+
+												CMD ["tail", "-f", "/dev/null"]
+
+
+
+#mod package.json
+#en "scripts" añadir
+"start": "node index.js"
+
+#crear imagen desde el mismo directorio de la app
+#desde visual o el cmd
+docker build -t notas-app .
+
+#verificar la imagen creada
+docker images
+
+#crear container para la app
+	(nombre del contenedor)  (nombre de la imagen, base)
+docker run --name server_notas notas-app
+
+#crear lo en segundo plano
+docker run -d --name server_notas notas-app
+
+#comprobar que este en ejecución
+docker ps
+
+#ejecutar la app
+docker exec -it notas-app node index.js ver
+docker exec -it notas-app node index.js agregar --title="hola mundo" --body="Around World"
+
+#Hacer push de la app notas
+
+#verificar la imagen
+docker image ls
+
+#tagear la imagen
+- - (imgName:version) (username/imgName)
+docker tag notas-app2:latest fabiio718/notas-app2
+
+#subir la imagen al repo
+- - (nombre de la imagen tageada)
+docker push fabiio718/notas-app2
+

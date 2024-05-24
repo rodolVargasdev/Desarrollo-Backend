@@ -1,0 +1,24 @@
+1. Crear una carpeta llamada ejercicio por ejemplo
+2. Dentro de la carpeta damos click derecho y abrir con git bash
+3. En la terminal de git escribir:
+
+    git clone https://github.com/UserWm/SesionMartes21052024.git
+
+4. Una vez terminada la clonación nos vamos dentro de la carpeta que se nos creó con:
+
+    cd SesionMartes21052024
+
+5. En esta carpeta de SesionMartes21052024 ponemos lo siguiente para abrirlo con VS code:
+
+    code .
+
+6. Hacemos el ejercicio de las importaciones/exportaciones en una carpeta (con nuestro nombre)
+   dentro de SesionMartes21052024. 
+
+5. Abrimos la carpeta de SesionMartes21052024 y dentro de ella presionamos click derecho y 
+   abrir con git bash y ponemos:
+
+   git add .
+   git commit -m "Cambios hechos en para el ejercicio"
+   git pull origin main
+   git pull origin master

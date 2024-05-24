@@ -1,0 +1,58 @@
+1. Crear una carpeta
+2. Con una cmd nos vamos a la carpeta creada y escribimos
+
+    npm init -y
+    npm install inquirer
+
+3. Añadimos lo siguiente a package.json justo arriba del  "scripts": {
+
+    "type": "module",
+
+4. Creamos un archivo de JS, por ejemplo app.js y ponemos:
+
+    import inquirer from 'inquirer'
+
+    const pregunta = [
+
+        {
+            type: 'input',
+            name: 'nombre',
+            message: 'Digame su nombre',
+        },
+        {
+            type: 'confirm',
+            name: 'confirmation',
+            message: 'Seguro ese el nombre?',
+        },
+        {
+            type: 'list',
+            name: 'colores',
+            message: 'Cual es tu color favorito?',
+            choices: ['Rojo', 'Verder', 'Azul', 'Gris']
+        },
+        {
+            type: 'checkbox', //Se elige la opcion con espacioy bajamos con las flechas
+            name: 'intereses',
+            message: 'Selecciona una opcion de interes',
+            choices: ['Programacion', 'Diseño', 'Base de datos', 'Redes']
+        },
+        {
+            type: 'password',
+            name: 'contraseña',
+            message: 'Ingrese tu contraseña',
+            mask: '*'
+        }
+    ]
+
+    inquirer.prompt(pregunta).then((respuesta) => {
+        if ( respuesta.confirmation ) {
+            console.log('Confirmation exitosa')
+            console.log(`Hola ${respuesta.nombre}`)
+            console.log(`Tu color favorito es: ${respuesta.colores}`)
+            console.log(`Tus intereses son: ${respuesta.intereses.join(', ')}`) 
+            console.log(`Tu contraseña es: ${respuesta.contraseña}`)
+            
+        } else {
+            console.log('No se confirmo el nombre')
+        }
+    })

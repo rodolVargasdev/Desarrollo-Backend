@@ -1,0 +1,9 @@
+1. Crear db --> dbComida
+2. Crear conexión -- menu
+3. use dbComida
+4. db.menu.insertOne({"combo": "combo1", "items": "Hamburguesa con papas", "bebida": "Pepsi"})
+5. db.menu.insertMany([{"combo": "combo2", "items": "Wraps de pollo", "bebida": "Coca-cola"}, {"combo": "combo3", "itemts": "Nuggets de pollo", "bebida": "Té helado"}])
+6. db.menu.find()
+7. db.menu.updateOne({"combo": "combo1"}, {$set:{"bebida": "Té helado"}})
+8. db.menu.find({"combo":"combo1"})
+9. db.menu.deleteOne({"bebida":"Coca-cola"})
